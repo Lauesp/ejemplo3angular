@@ -1,19 +1,13 @@
-<p>main-page works!</p>
+<h1>Alumnos IEVN 1003</h1>
+<hr>
 
-<h1>Alumnos EVN1003</h1>
-<hr><div class="row">
+<div class="row">
     <div class="col">
-        <h3>Alumnos 1003</h3>
-        <ul *ngFor="let alum of alumnosUtl">
-            <li>{{alum.nombre}} - {{alum.edad}}</li>
-        </ul>
+    <app-alumnos></app-alumnos>
     </div>
-    <div class="col">
-        <h3>Agregar</h3>
-        <form (ngSubmit)="agregar()" action="">
-            <input type="text" name="nombre" [(ngModel)]="regAlumno.nombre" placeholder="Nombre">
-            <input type="number" name="edad" [(ngModel)]="regAlumno.edad" placeholder="Edad">
-            <button type="submit">Agregar</button>
-        </form>
-    </div>
+    <div class="col"> 
+        <app-agregar [regAlumno]="regAlumno" ></app-agregar>
 </div>
+
+
+        
